@@ -1,0 +1,66 @@
+
+=INFO REPORT==== 23-Mar-2013::18:56:44 ===
+Starting Boss in development mode....
+
+=INFO REPORT==== 23-Mar-2013::18:56:44 ===
+Starting master services on 'bbserv@li129-249'
+
+=INFO REPORT==== 23-Mar-2013::18:56:44 ===
+SSL:[]
+
+=INFO REPORT==== 23-Mar-2013::18:56:44 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 23-Mar-2013::19:05:19 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 23-Mar-2013::19:05:19 ===
+GET / [bbserv] 404 0ms
+
+=INFO REPORT==== 23-Mar-2013::19:05:20 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 23-Mar-2013::19:05:20 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 3ms
+
+=INFO REPORT==== 23-Mar-2013::19:05:20 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 23-Mar-2013::19:05:20 ===
+GET / [bbserv] 404 1ms
+
+=INFO REPORT==== 23-Mar-2013::19:05:21 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 23-Mar-2013::19:05:21 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 0ms
+
+=INFO REPORT==== 23-Mar-2013::19:17:07 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 23-Mar-2013::19:17:07 ===
+GET /hello/world [bbserv] 200 43ms
+
+=INFO REPORT==== 23-Mar-2013::19:17:07 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 23-Mar-2013::19:17:07 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 0ms
+
+=INFO REPORT==== 23-Mar-2013::19:21:23 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 23-Mar-2013::19:21:23 ===
+GET /hello/world [bbserv] 200 23ms
+
+=INFO REPORT==== 23-Mar-2013::19:21:27 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 23-Mar-2013::19:21:27 ===
+GET /hello/world [bbserv] 200 26ms
+
+=INFO REPORT==== 23-Mar-2013::19:25:55 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 23-Mar-2013::19:25:55 ===
+GET /hello/world [bbserv] 200 30ms

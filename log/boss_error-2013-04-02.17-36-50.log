@@ -1,0 +1,153 @@
+
+=INFO REPORT==== 2-Apr-2013::17:36:50 ===
+Starting Boss in development mode....
+
+=INFO REPORT==== 2-Apr-2013::17:36:50 ===
+Starting master services on bbserv@localhost
+
+=INFO REPORT==== 2-Apr-2013::17:36:50 ===
+SSL:[]
+
+=INFO REPORT==== 2-Apr-2013::17:36:50 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 2-Apr-2013::17:38:35 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 2-Apr-2013::17:38:35 ===
+GET /greeting/send_test_message [bbserv] 200 60ms
+
+=INFO REPORT==== 2-Apr-2013::17:39:09 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 2-Apr-2013::17:39:09 ===
+GET /greeting/send_test_message [bbserv] 200 72ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:31 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:07:32 ===
+GET /greeting/create [bbserv] 200 85ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:39 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:07:40 ===
+GET /greeting/live [bbserv] 200 113ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:40 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+POST /greeting/create [bbserv] 302 96ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+GET /greeting/pull/1364962059962961 [bbserv] 200 16595ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+GET /greeting/list [bbserv] 200 83ms
+
+=INFO REPORT==== 3-Apr-2013::04:07:56 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:07 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:07 ===
+GET /greeting/create [bbserv] 200 85ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:14 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:14 ===
+POST /greeting/create [bbserv] 302 78ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:14 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:14 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:14 ===
+GET /greeting/pull/1364962076723150 [bbserv] 200 88ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:15 ===
+GET /greeting/list [bbserv] 200 99ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:15 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:19 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:19 ===
+GET /greeting/create [bbserv] 200 89ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+POST /greeting/create [bbserv] 302 81ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+GET /greeting/pull/1364962094979782 [bbserv] 200 79ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+GET /greeting/list [bbserv] 200 87ms
+
+=INFO REPORT==== 3-Apr-2013::04:08:36 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:09:42 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:09:42 ===
+GET /greeting/live [bbserv] 200 90ms
+
+=INFO REPORT==== 3-Apr-2013::04:09:43 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:17:01 ===
+Did you see that??
+
+=INFO REPORT==== 3-Apr-2013::04:19:19 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:19:19 ===
+GET /greeting/create [bbserv] 200 89ms
+
+=INFO REPORT==== 3-Apr-2013::04:19:31 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:19:31 ===
+Did you see that??
+
+=INFO REPORT==== 3-Apr-2013::04:19:31 ===
+POST /greeting/create [bbserv] 302 76ms
+
+=INFO REPORT==== 3-Apr-2013::04:19:31 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:19:32 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 3-Apr-2013::04:19:32 ===
+GET /greeting/pull/1364962182862054 [bbserv] 200 79ms
+
+=INFO REPORT==== 3-Apr-2013::04:19:32 ===
+GET /greeting/list [bbserv] 200 91ms
+
+=INFO REPORT==== 3-Apr-2013::04:19:32 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....

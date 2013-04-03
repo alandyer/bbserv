@@ -1,0 +1,54 @@
+
+=INFO REPORT==== 24-Mar-2013::19:17:05 ===
+Starting Boss in development mode....
+
+=INFO REPORT==== 24-Mar-2013::19:17:05 ===
+Starting master services on 'bbserv@li129-249'
+
+=INFO REPORT==== 24-Mar-2013::19:17:05 ===
+SSL:[]
+
+=INFO REPORT==== 24-Mar-2013::19:17:05 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 24-Mar-2013::19:17:22 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 24-Mar-2013::19:17:22 ===
+GET /greeting/list [bbserv] 200 57ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:22 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 24-Mar-2013::19:17:22 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 0ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:24 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 24-Mar-2013::19:17:24 ===
+GET /greeting/create [bbserv] 200 68ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:24 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 24-Mar-2013::19:17:24 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 0ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:32 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 24-Mar-2013::19:17:32 ===
+POST /greeting/create [bbserv] 302 59ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:33 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 24-Mar-2013::19:17:33 ===
+GET /greeting/list [bbserv] 200 69ms
+
+=INFO REPORT==== 24-Mar-2013::19:17:33 ===
+Loading routes from "/root/Projects/bbserv/priv/bbserv.routes" ....
+
+=ERROR REPORT==== 24-Mar-2013::19:17:33 ===
+GET /apple-touch-icon-precomposed.png [bbserv] 404 0ms
