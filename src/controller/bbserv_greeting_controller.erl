@@ -30,8 +30,13 @@ pull('GET', [LastTimestamp]) ->
   {ok, Timestamp, Greetings} = boss_mq:pull("new-greetings", list_to_integer(LastTimestamp)),
   {json, [{timestamp, Timestamp}, {greetings, Greetings}]}.
 
+delete_listener('GET', [LastTimestamp]) ->
+  {ok, Timestamp, Greetings} = boss_mq:pull("old-greetings", list_to_integer(LastTimestamp)),
+  {json, [{deletestamp, Timestamp}, {greetings, Greetings}]}.
+
 live('GET', []) ->
   Greetings = boss_db:find(greeting, []),
   Timestamp = boss_mq:now("new-greetings"),
-  {ok, [{greetings, Greetings}, {timestamp, Timestamp}]}.
+  Deletestamp = boss_mq:now("old-greetings"),
+  {ok, [{greetings, Greetings}, {timestamp, Timestamp}, {deletestamp, Deletestamp}]}.
 
