@@ -8,7 +8,7 @@
 init() ->
     {ok, WatchId} = boss_news:watch("greetings",
       fun(created, NewGreeting) ->
-        boss_mq:push("new-greetings", NewGreeting);
+        boss_mq:push("greeting-channel", NewGreeting);
          (deleted, OldGreeting) ->
         boss_mq:push("old-greetings", OldGreeting)
       end),

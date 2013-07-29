@@ -27,11 +27,11 @@ send_test_message('GET', []) ->
   {output, TestMessage}.
 
 pull('GET', [LastTimestamp]) ->
-  {ok, Timestamp, Greetings} = boss_mq:pull("new-greetings", list_to_integer(LastTimestamp)),
+  {ok, Timestamp, Greetings} = boss_mq:pull("greetings-channel", list_to_integer(LastTimestamp)),
   {json, [{timestamp, Timestamp}, {greetings, Greetings}]}.
 
 delete_listener('GET', [LastTimestamp]) ->
-  {ok, Timestamp, Greetings} = boss_mq:pull("old-greetings", list_to_integer(LastTimestamp)),
+  {ok, Timestamp, Greetings} = boss_mq:poll("old-greetings", list_to_integer(LastTimestamp)),
   {json, [{deletestamp, Timestamp}, {greetings, Greetings}]}.
 
 live('GET', []) ->

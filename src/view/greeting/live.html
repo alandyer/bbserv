@@ -12,17 +12,12 @@
             $("li").remove('[value="empty"]');
             $("#greeting_list").append('<li value="'+data.greetings[i].id+'">'+msg);
           }
-          listen_for_events(data.timestamp);
         }
       });
-    }
-    $(document).ready(function() {
       listen_for_events({{ timestamp }});
-    });
+    }
   </script>
   <script>
-    function listen_for_deletes(deletestamp) {
-      $.ajax("/greeting/delete_listener/"+deletestamp, { success:
         function(data, code, xhr) {
           for (var i = 0; i < data.greetings.length; i++) {
             var msg = data.greetings[i].id;
@@ -31,14 +26,10 @@
           if (!$("#greeting_list")) {
             $("#greeting_list").append('<li value="empty">No Greetings!');
           } 
-          listen_for_deletes(data.deletestamp);
         }
       });
     }
-    $(document).ready(function() {
-      listen_for_deletes({{ deletestamp }});
-    });
-  </script>
+ </script>
 </head>
 <body>
   <ul id="greeting_list">
@@ -49,5 +40,10 @@
     {% endfor %}
   </ul>
 </body>
+<script>
+    $(document).ready(function() {
+      listen_for_events({{ timestamp }});
+    });
+ </script>
 </html>
       

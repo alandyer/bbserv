@@ -2143,3 +2143,195 @@ Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
 
 =INFO REPORT==== 4-Apr-2013::16:41:02 ===
 Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:38:59 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:39:00 ===
+GET /greeting/live [bbserv] 200 133ms
+
+=INFO REPORT==== 5-Apr-2013::15:39:00 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:39:00 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:39:00 ===
+GET /greeting/pull/1365187140014190 [bbserv] 200 62ms
+
+=INFO REPORT==== 5-Apr-2013::15:39:00 ===
+GET /greeting/delete_listener/1365187140014292 [bbserv] 200 60ms
+
+=INFO REPORT==== 5-Apr-2013::15:40:37 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:40:37 ===
+GET /greeting/create [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::15:40:39 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:40:39 ===
+POST /greeting/create [bbserv] 302 43ms
+
+=INFO REPORT==== 5-Apr-2013::15:40:39 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:40:39 ===
+GET /greeting/list [bbserv] 200 49ms
+
+=INFO REPORT==== 5-Apr-2013::15:50:20 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:50:20 ===
+GET /greeting/create [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::15:50:23 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:50:23 ===
+POST /greeting/create [bbserv] 302 48ms
+
+=INFO REPORT==== 5-Apr-2013::15:50:23 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::15:50:23 ===
+GET /greeting/list [bbserv] 200 50ms
+
+=INFO REPORT==== 5-Apr-2013::16:01:28 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:01:28 ===
+GET /greeting/create [bbserv] 200 50ms
+
+=INFO REPORT==== 5-Apr-2013::16:01:36 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:01:36 ===
+GET /greeting/live [bbserv] 200 68ms
+
+=INFO REPORT==== 5-Apr-2013::16:02:01 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:02:01 ===
+GET /greeting/live [bbserv] 200 72ms
+
+=INFO REPORT==== 5-Apr-2013::16:02:34 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:02:34 ===
+POST /greeting/create [bbserv] 302 45ms
+
+=INFO REPORT==== 5-Apr-2013::16:02:34 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:02:34 ===
+GET /greeting/list [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::16:02:48 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:02:48 ===
+GET /greeting/live [bbserv] 200 50ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:12 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:12 ===
+GET /greeting/live [bbserv] 200 69ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:12 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:12 ===
+GET /greeting/delete_listener/1365188592361098 [bbserv] 200 44ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:15 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:15 ===
+GET /greeting/create [bbserv] 200 47ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:17 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:17 ===
+POST /greeting/create [bbserv] 302 44ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:17 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:17 ===
+GET /greeting/list [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:46 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:46 ===
+GET /greeting/live [bbserv] 200 67ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:46 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:46 ===
+GET /greeting/delete_listener/1365188626728819 [bbserv] 200 41ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:49 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:49 ===
+GET /greeting/create [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:52 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:52 ===
+POST /greeting/create [bbserv] 302 47ms
+
+=INFO REPORT==== 5-Apr-2013::16:03:52 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:03:52 ===
+GET /greeting/list [bbserv] 200 52ms
+
+=INFO REPORT==== 5-Apr-2013::16:04:11 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:04:11 ===
+GET /greeting/live [bbserv] 200 51ms
+
+=INFO REPORT==== 5-Apr-2013::16:04:11 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:04:11 ===
+GET /greeting/delete_listener/1365188651280352 [bbserv] 200 44ms
+
+=INFO REPORT==== 5-Apr-2013::16:09:56 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:09:56 ===
+GET /greeting/live [bbserv] 200 71ms
+
+=INFO REPORT==== 5-Apr-2013::16:09:56 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:09:56 ===
+GET /greeting/pull/1365188996832312 [bbserv] 200 45ms
+
+=INFO REPORT==== 5-Apr-2013::16:10:24 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:10:24 ===
+GET /greeting/create [bbserv] 200 50ms
+
+=INFO REPORT==== 5-Apr-2013::16:10:28 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:10:28 ===
+POST /greeting/create [bbserv] 302 43ms
+
+=INFO REPORT==== 5-Apr-2013::16:10:28 ===
+Loading routes from "/Users/alan/src/bbserv/priv/bbserv.routes" ....
+
+=INFO REPORT==== 5-Apr-2013::16:10:28 ===
+GET /greeting/list [bbserv] 200 50ms
