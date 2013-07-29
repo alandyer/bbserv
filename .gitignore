@@ -4,4 +4,4 @@ deps
 *.beam
 *.plt
 log/*.log
-
+*.log
