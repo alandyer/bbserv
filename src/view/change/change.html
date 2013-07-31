@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Gets the change</title>
+</head>
+
+<body>
+
+<h2>Enter a number to get the amount of change (currently only works with floats)</h2>
+
+<form method="post" action="{% url action="change" %}">
+<textarea name="change_raw"></textarea>
+<input type="submit">
+</form>
+
+<ul>
+{% if changes %}
+  {% for change in changes %}
+    <li> {{ change.denomination }} {{ change.amount }}
+  {% endfor %}
+{% else %}
+  <li>No Change
+{% endif %}
+</ul>
+
+</body>
+</html>
