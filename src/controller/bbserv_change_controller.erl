@@ -3,10 +3,14 @@
 
 change('GET', []) -> ok;
 change('POST', []) ->
-  ChangeRaw = list_to_float(Req:post_param("change_raw")),
-  %erlang:display(ChangeRaw),
-  Change = get_change(ChangeRaw),
-  {ok, [{changes, Change}, {change_raw, ChangeRaw}]}.
+  ChangeRaw = Req:post_param("change_raw"),
+  case io_lib:fread("~d", ChangeRaw) of
+    {ok, [ChangeVal], _} ->
+      Change = get_change(ChangeVal),
+      {ok, [{changes, Change}, {change_raw, ChangeRaw}]};
+    {error, _} ->
+      {ok, [{badarg, ChangeRaw}]}
+  end.
 
 get_change(RawChange) ->
   lists:reverse(get_change([200, 100, 25, 10, 5, 1], round(RawChange * 100), [])).

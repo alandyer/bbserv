@@ -5,7 +5,7 @@
 
 <body>
 
-<h2>Enter a number to get the amount of change (currently only works with floats)</h2>
+<h2>Enter a number to get the amount of change</h2>
 
 <form method="post" action="{% url action="change" %}">
 <textarea name="change_raw"></textarea>
@@ -14,6 +14,8 @@
 
 {% if change_raw %}
 <p>Minimum number of coins in: ${{change_raw}}</p>
+{% elif badarg %}
+<p>You didn't supply a number, what I got was "{{ badarg }}"</p>
 {% endif %}
 
 <ul>
