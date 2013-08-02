@@ -12,10 +12,20 @@
 <input type="submit">
 </form>
 
+{% if change_raw %}
+<p>Minimum number of coins in: ${{change_raw}}</p>
+{% endif %}
+
 <ul>
 {% if changes %}
   {% for change in changes %}
-    <li> {{ change.denomination }} {{ change.amount }}
+    <li> {% if change.denomination == 200 %} {{ "Toonies" }}
+         {% elif change.denomination == 100 %} {{"Loonies"}}
+         {% elif change.denomination == 25 %} {{"Quarters"}}
+         {% elif change.denomination == 10 %} {{"Dimes"}}
+         {% elif change.denomination == 5 %} {{"Nickels"}}
+         {% elif change.denomination == 1 %} {{"Pennies"}}
+         {% endif %} : {{ change.amount }}
   {% endfor %}
 {% else %}
   <li>No Change

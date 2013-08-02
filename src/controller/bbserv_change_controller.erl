@@ -2,11 +2,11 @@
 -compile(export_all).
 
 change('GET', []) -> ok;
-change('POST', []) -> 
+change('POST', []) ->
   ChangeRaw = list_to_float(Req:post_param("change_raw")),
   %erlang:display(ChangeRaw),
   Change = get_change(ChangeRaw),
-  {ok, [{changes, Change}]}.
+  {ok, [{changes, Change}, {change_raw, ChangeRaw}]}.
 
 get_change(RawChange) ->
   lists:reverse(get_change([200, 100, 25, 10, 5, 1], round(RawChange * 100), [])).
