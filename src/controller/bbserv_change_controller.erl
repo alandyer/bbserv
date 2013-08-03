@@ -4,12 +4,19 @@
 change('GET', []) -> ok;
 change('POST', []) ->
   ChangeRaw = Req:post_param("change_raw"),
-  case io_lib:fread("~d", ChangeRaw) of
+  case io_lib:fread("~f", ChangeRaw) of
     {ok, [ChangeVal], _} ->
+      erlang:display(ChangeVal),
       Change = get_change(ChangeVal),
       {ok, [{changes, Change}, {change_raw, ChangeRaw}]};
     {error, _} ->
-      {ok, [{badarg, ChangeRaw}]}
+      case io_lib:fread("~d", ChangeRaw) of
+        {ok, [ChangeVal], _} ->
+          Change = get_change(ChangeVal),
+          {ok, [{changes, Change}, {change_raw, ChangeRaw}]};
+        {error, _} ->
+          {ok, [{badarg, ChangeRaw}]}
+      end
   end.
 
 get_change(RawChange) ->
@@ -19,6 +26,6 @@ get_change([], _RawChange, Acc) ->
   Acc;
 get_change([DIV|Tail], RawChange, Acc) ->
   ChangeCount = RawChange div DIV,
-  erlang:display(RawChange),
+  %erlang:display(RawChange),
   get_change(Tail, RawChange rem DIV, [[{denomination, DIV}, {amount, ChangeCount}] | Acc]).
 
