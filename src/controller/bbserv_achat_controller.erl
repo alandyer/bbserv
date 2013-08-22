@@ -18,7 +18,14 @@ init(Args) ->
 handle_call(Request, From, State) ->
   case Request of
     {login, LoginName} ->
-      [{{pid, From}, {login, LoginName}} | State]
+      [{{pid, From}, {login, LoginName}} | State];
+    {send_msg, Msg} ->
+      export_msg(Msg, State)
   end.
       
+
+export_msg(Msg, []) -> ok.
+export_msg(Msg, [User |State]) ->
+  [{pid, UserPid}, {login, LoginName}] = User,
+  UserPid ! [{login, LoginName}, {msg, Msg}].
 
