@@ -12,10 +12,13 @@
             $("li").remove('[value="empty"]');
             $("#greeting_list").append('<li value="'+data.greetings[i].id+'">'+msg);
           }
+          listen_for_events(data.timestamp);
         }
       });
-      listen_for_events({{ timestamp }});
     }
+    $(document).ready(function() {
+      listen_for_events({{ timestamp }});
+    });
   </script>
   <script>
         function(data, code, xhr) {
@@ -40,10 +43,5 @@
     {% endfor %}
   </ul>
 </body>
-<script>
-    $(document).ready(function() {
-      listen_for_events({{ timestamp }});
-    });
- </script>
 </html>
       
