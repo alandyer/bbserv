@@ -1,31 +1,35 @@
 -module(bbserv_achat_controller, [Req]).
 -compile(export_all).
--behaviour(gen_server).
 
 
-login('GET', []) -> ok;
+pull('GET', [LastTimestamp]) ->
+  {ok, Timestamp, Messages} = boss_mq:pull("achat-channel", list_to_integer(LastTimestamp)),
+  {json, [{timestamp, Timestamp}, {messages, Messages}]}.
 
-login('POST', []) ->
-  LoginName = Req:post_param("login_name").
-
-init(Args) -> ok.
-
-start_link(bbserv_achat_controller, _Args, _Options) -> ok.
-
-init(Args) ->
-  ok.
-
-handle_call(Request, From, State) ->
-  case Request of
-    {login, LoginName} ->
-      [{{pid, From}, {login, LoginName}} | State];
-    {send_msg, Msg} ->
-      export_msg(Msg, State)
+push('GET', [Message]) ->
+  NewMessage = achatMessage:new(id, Message),
+  case NewMessage:save() of
+    {ok, SavedMessage} ->
+      {json, [{message, Message}]};
+    {error, ErrorList} ->
+      {json, [{errors, ErrorList}, {message, NewMessage}]}
   end.
-      
+apush('GET', [Message]) ->
+  NewMessage = achatMessage:new(id, Message),
+  {json, [{message, Message}]}.
 
-export_msg(Msg, []) -> ok.
-export_msg(Msg, [User |State]) ->
-  [{pid, UserPid}, {login, LoginName}] = User,
-  UserPid ! [{login, LoginName}, {msg, Msg}].
+chatscreen('GET', []) ->
+  Messages = boss_db:find(achatMessage, []),
+  Timestamp = boss_mq:now("achat-channel"),
+  {ok, [{messages, Messages}, {timestamp, Timestamp}]};
+
+chatscreen('POST', []) ->
+  MessageText = Req:post_param("message_text"),
+  NewMessage = achatMessage:new(id, MessageText),
+  case NewMessage:save() of
+    {ok, SavedMessage} ->
+      {redirect, [{action, "chatscreen"}]};
+    {error, ErrorList} ->
+      {ok, [{errors, ErrorList}, {new_msg, NewMessage}]}
+  end.
 

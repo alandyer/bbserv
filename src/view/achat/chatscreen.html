@@ -1,0 +1,42 @@
+
+<html>
+<head>
+  <title>Alan Chat</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script>
+    function listen_for_events(timestamp) {
+      $.ajax("/achat/pull/"+timestamp, {
+        success:
+          function(data, code, xhr) {
+            for(var i = 0; i < data.messages.length; i++) {
+              var msg = data.messages[i].message_text;
+              $("#chatlog").val($("#chatlog").val() + msg);
+            }
+            listen_for_events(data.timestamp);
+          }
+      });
+    }
+  </script>
+</head>
+<body>
+<textarea rows = "50" cols="100" id="chatlog" disabled>
+{% for message in messages %}{{ message.message_text }}
+{% empty %}
+{% endfor %}
+</textarea>
+<form method="post">
+<p id="log_name">Guest</p>
+<textarea name="message_text" autofocus>{% if new_msg %}{{ new_msg.message_text }}{% endif %}</textarea>
+<input type="submit">
+</form>
+
+</body>
+<script>
+  $(document).ready(function() {
+    listen_for_events({{ timestamp }});
+  });
+</script>
+</html>
+
+
+
