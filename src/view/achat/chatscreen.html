@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Alan Chat</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script>
     function listen_for_events(timestamp) {
       $.ajax("/achat/pull/"+timestamp, {
@@ -10,7 +10,7 @@
           function(data, code, xhr) {
             for(var i = 0; i < data.messages.length; i++) {
               var msg = data.messages[i].message_text;
-              $("#chatlog").val($("#chatlog").val() + msg);
+              $("#chatlog").val($("#chatlog").val() + msg + "\n");
             }
             listen_for_events(data.timestamp);
           }
@@ -24,17 +24,33 @@
 {% empty %}
 {% endfor %}
 </textarea>
-<form method="post">
+
 <p id="log_name">Guest</p>
-<textarea name="message_text" autofocus>{% if new_msg %}{{ new_msg.message_text }}{% endif %}</textarea>
-<input type="submit">
-</form>
+<textarea id="message_text" autofocus>{% if new_msg %}{{ new_msg.message_text }}{% endif %}</textarea>
+<button id="send_button">Send</button>
 
 </body>
 <script>
   $(document).ready(function() {
+    $("#send_button").click(function() {
+      submit_text();
+    });
+    $("#message_text").keypress(function() {
+      if(event.which == 13) { //keypress = enter
+        event.preventDefault();
+        submit_text();
+      }
+    });
+    function submit_text() {
+      var text = $("textarea#message_text").val();
+      $.ajax("/achat/push/" + text);
+      $("textarea#message_text").val("");
+      $("#message_text").focus();
+    }
     listen_for_events({{ timestamp }});
   });
+</script>
+<script>
 </script>
 </html>
 
