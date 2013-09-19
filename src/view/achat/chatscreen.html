@@ -25,7 +25,7 @@
 {% endfor %}
 </textarea>
 
-<p id="log_name">Guest</p>
+<p id="log_name">{% if login %}{{ login }}{% else %}Guest{% endif %}</p>
 <textarea id="message_text" autofocus>{% if new_msg %}{{ new_msg.message_text }}{% endif %}</textarea>
 <button id="send_button">Send</button>
 

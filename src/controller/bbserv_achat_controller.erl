@@ -2,6 +2,16 @@
 -compile(export_all).
 
 
+
+login('GET', []) ->
+  ok;
+
+login('POST', []) ->
+  LogName = Req:post_param("login_name"),
+  %Authenticate
+  {redirect, [{action, string:concat("chatscreen/", LogName)}]}.
+
+
 pull('GET', [LastTimestamp]) ->
   {ok, Timestamp, Messages} = boss_mq:pull("achat-channel", list_to_integer(LastTimestamp)),
   {json, [{timestamp, Timestamp}, {messages, Messages}]}.
@@ -18,18 +28,24 @@ apush('GET', [Message]) ->
   NewMessage = achatMessage:new(id, Message),
   {json, [{message, Message}]}.
 
+chatscreen('GET', [LogName]) ->
+  Messages = boss_db:find(achatMessage, []),
+  Timestamp = boss_mq:now("achat-channel"),
+  {ok, [{messages, Messages}, {timestamp, Timestamp}, {login, LogName}]};
+
 chatscreen('GET', []) ->
   Messages = boss_db:find(achatMessage, []),
   Timestamp = boss_mq:now("achat-channel"),
-  {ok, [{messages, Messages}, {timestamp, Timestamp}]};
+  {ok, [{messages, Messages}, {timestamp, Timestamp}]}.
 
-chatscreen('POST', []) ->
-  MessageText = Req:post_param("message_text"),
-  NewMessage = achatMessage:new(id, MessageText),
-  case NewMessage:save() of
-    {ok, SavedMessage} ->
-      {redirect, [{action, "chatscreen"}]};
-    {error, ErrorList} ->
-      {ok, [{errors, ErrorList}, {new_msg, NewMessage}]}
-  end.
+%chatscreen('POST', []) ->
+%  MessageText = Req:post_param("message_text"),
+%  NewMessage = achatMessage:new(id, MessageText),
+%  case NewMessage:save() of
+%    {ok, SavedMessage} ->
+%      {redirect, [{action, "chatscreen"}]};
+%    {error, ErrorList} ->
+%
+%      {ok, [{errors, ErrorList}, {new_msg, NewMessage}]}
+%  end.
 
