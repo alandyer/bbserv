@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Login Status Page</title>
+</head>
+
+<body>
+
+<ul>
+{% if sessions %}
+  {% for session in sessions %}
+    <li> {{session.key}}:{{session.value}}
+  {% endfor %}
+{% else %}
+  <li> No Sessions Active
+{% endif %}
+</ul>
+
+
+
+</body>
+</html>
